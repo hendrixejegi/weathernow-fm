@@ -12,7 +12,7 @@ import overcast from "../../assets/images/icon-overcast.webp";
 const DailyForecastContainer = () => {
   return (
     <div>
-      <h2 className="text-preset-5 text-neutral-0">Daily forecast</h2>
+      <h2 className="text-preset-5 text-neutral-0 mb-4">Daily forecast</h2>
       <div className="grid grid-cols-3 gap-4 md:grid-cols-7">
         <DailyForecast day="Tue" icon={drizzle} range={[20, 14]} />
         <DailyForecast day="Wed" icon={rain} range={[21, 15]} />
@@ -30,7 +30,7 @@ export default DailyForecastContainer;
 
 function DailyForecast({ day, icon, range }) {
   return (
-    <div className="radius-12 place-items-center space-y-4 border border-neutral-600 bg-neutral-800 px-2.5 py-4">
+    <div className="radius-12 flex flex-col items-center space-y-4 border border-neutral-600 bg-neutral-800 px-2.5 py-4">
       <p className="text-preset-6 text-neutral-0">{day}</p>
       <img src={icon} width={60} />
       <p className="text-preset-7 flex w-full items-center justify-between text-neutral-200">
