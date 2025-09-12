@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import search from "../assets/images/icon-search.svg";
 import { cn } from "@/lib/utils";
 
-const SearchInput = () => {
+const SearchInput = ({ className }) => {
   const containerRef = useRef(null);
   const [isFocus, setIsFocus] = useState(false);
 
@@ -17,7 +17,8 @@ const SearchInput = () => {
       ref={containerRef}
       onClick={focusOnInput}
       className={cn(
-        "radius-12 flex w-full max-w-[526px] cursor-text items-center gap-4 bg-neutral-800 px-6 py-4 hover:bg-neutral-700",
+        "radius-12 flex w-full cursor-text items-center gap-4 bg-neutral-800 px-6 py-4 hover:bg-neutral-700",
+        className,
         isFocus
           ? "shadow-[0_0_0_3px_var(--neutral-900),_0_0_0_5px_var(--neutral-0)] hover:bg-neutral-800"
           : null,
