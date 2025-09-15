@@ -8,6 +8,7 @@ import drizzle from "../../assets/images/icon-rain.webp";
 import snow from "../../assets/images/icon-snow.webp";
 import storm from "../../assets/images/icon-storm.webp";
 import overcast from "../../assets/images/icon-overcast.webp";
+import { useLocationContext } from "@/context/LocationContext";
 
 const WeatherInfoContainer = () => {
   return (
@@ -21,11 +22,13 @@ const WeatherInfoContainer = () => {
 export default WeatherInfoContainer;
 
 function Info() {
+  const { address } = useLocationContext();
+
   return (
     <div className="radius-20 mb-[var(--spacing-250)] flex flex-col items-center justify-between gap-4 overflow-hidden bg-[url(/bg-today-small.svg)] bg-cover bg-center bg-no-repeat px-6 py-20 md:flex-row md:bg-[url(/bg-today-large.svg)] lg:mb-8">
       <div>
         <p className="text-preset-4 text-neutral-0 mb-3 text-center md:text-start">
-          Berlin, Germany
+          {address && `${address.city}, ${address.state}`}
         </p>
         <p className="text-preset-6 text-neutral-0 text-center md:text-start">
           Tuesday, Aug 5, 2025

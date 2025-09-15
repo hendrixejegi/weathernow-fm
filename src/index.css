@@ -307,9 +307,6 @@
   }
 
   .dropdown-content {
-    margin-block: 10px;
-    margin-right: 16px;
-    transform: translateX(-16px);
     width: 214px;
     border: 1px solid var(--neutral-600);
     padding: 6px 8px !important;
