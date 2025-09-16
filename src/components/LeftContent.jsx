@@ -5,7 +5,7 @@ import DailyForecastContainer from "./LeftContent/DailyForecastContainer";
 
 const LeftContent = () => {
   return (
-    <div className="mb-5 lg:mb-0">
+    <div className="lg: mb-5 justify-between lg:mb-0 lg:flex lg:flex-col">
       <WeatherInfoContainer />
       <DailyForecastContainer />
     </div>

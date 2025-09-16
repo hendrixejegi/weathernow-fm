@@ -60,7 +60,11 @@ function HourlyForecastDropdown() {
         <span>Tuesday</span>
         <img src={arrow} width={9} height={14} alt="" aria-hidden="true" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="dropdown-content">
+      <DropdownMenuContent
+        className="dropdown-content"
+        align="end"
+        sideOffset={10}
+      >
         <DropdownMenuLabel className="dropdown-label">
           Hourly forecast menu
         </DropdownMenuLabel>
